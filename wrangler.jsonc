@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "apimag",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "magbici",
+          "database_id": "5ffff844-3fb9-4e0e-8e43-fcf63744dd9a"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "a5dc83c5b2304c128ca269478ef32035",
+            "binding": "SECRET",
+            "secret_name": "Shalaby"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
